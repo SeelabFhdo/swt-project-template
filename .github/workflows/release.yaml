@@ -22,8 +22,8 @@ jobs:
           # This is a list of all projects that should be built and pushed.
           # YOU NEED TO UPDATE THIS LIST WHEN YOU ADD A NEW PROJECT AND WITH
           # THE CORRECT NAME OF THE PROJECT FOLDER.
-          - project_one
-          - project_two
+          # - project_one
+          # - project_two
     steps:
       - name: Checkout
         uses: actions/checkout@v4
