@@ -15,6 +15,7 @@ jobs:
         os: [ubuntu-latest]
         jdk: [24]
         project:
+          - 
           # This is a list of all projects that should be built and pushed.
           # YOU NEED TO UPDATE THIS LIST WHEN YOU ADD A NEW PROJECT AND WITH
           # THE CORRECT NAME OF THE PROJECT FOLDER.
@@ -31,5 +32,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven of ${{ matrix.project }}
+        if: ${{ matrix.project != '' }}
         working-directory: ${{ matrix.project }}
         run: mvn --batch-mode --update-snapshots verify
